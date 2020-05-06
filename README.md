@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/fabiotavarespr/docker-bind.svg?style=shield)](https://circleci.com/gh/fabiotavarespr/docker-bind) 
+[![Circle CI](https://circleci.com/gh/fabiotavarespr/dns-bind9.svg?style=shield)](https://circleci.com/gh/fabiotavarespr/dns-bind9) 
 
 # fabiotavarespr/dns-bind9
 
