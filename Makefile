@@ -1,15 +1,20 @@
+MAINTAINER=fabiotavarespr
+PROJECT=dns-bind9
+VERSION=9.11.3
+EXPOSE-PORT=53
+
 all: build
 
 build:
-	@docker build --tag=fabiotavarespr/dns-bind9:9.11.3 .
-	@docker build --tag=fabiotavarespr/dns-bind9:latest .
+	@docker build --tag=${MAINTAINER}/${PROJECT}:${VERSION} .
+	@docker build --tag=${MAINTAINER}/${PROJECT}:latest .
 
 push:
-	@docker push fabiotavarespr/dns-bind9:9.11.3
-	@docker push fabiotavarespr/dns-bind9:latest 
+	@docker push ${MAINTAINER}/${PROJECT}:${VERSION}
+	@docker push ${MAINTAINER}/${PROJECT}:latest 
 
 docker-run:
-	@docker run --rm --name bind -d --publish 53:53/tcp --publish 53:53/udp --volume ${PWD}/.bind9:/data fabiotavarespr/dns-bind9
+	@docker run --rm --name bind -d --publish ${EXPOSE-PORT}:${EXPOSE-PORT}/tcp --publish ${EXPOSE-PORT}:${EXPOSE-PORT}/udp --volume ${PWD}/.bind9:/data ${MAINTAINER}/${PROJECT}
 
 docker-stop:
 	@docker stop bind
