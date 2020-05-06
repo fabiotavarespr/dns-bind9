@@ -12,7 +12,7 @@
 - [Maintenance](#maintenance)
   - [Upgrading](#upgrading)
   - [Shell Access](#shell-access)
-- [Reference] (#reference)
+- [Reference](#references)
 
 # Introduction
 
