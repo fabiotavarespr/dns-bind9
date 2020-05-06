@@ -3,9 +3,9 @@ version: '2'
 services:
   bind9:
     restart: always
-    image: fabiotavarespr/dns-bind9
+    image: fabiotavarespr/dns-bind9:latest
     ports:
     - "53:53/udp"
     - "53:53/tcp"
     volumes:
-    - /srv/docker/bind:/data
+    - ./bind9:/data
